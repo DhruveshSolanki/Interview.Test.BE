@@ -1,20 +1,44 @@
-A junior developer has just accomplished a task suspiciously fast... and went for lunch.
+# GraduationTracker
 
-There are now unit tests breaking on the build server and only you have the skills to fix it.
+## Overview
 
-You should 
+This solution provides a simple graduation tracking system for students. It consists of two projects:
 
-  - Fix the broken unit test
-  - Make sure there is adequate test coverage
-  - Make sure all code is clean and follows best practices
-  - Review the code for additional logic errors
+- **GraduationTracker**: The main library containing models, repositories, and services to determine if a student has graduated based on diploma requirements and course marks.
+- **GraduationTracker.Tests.Unit**: Unit tests for validating graduation logic.
 
-All joking aside, there is no need to finish this in the span of a lunch hour. 
+### Approach
 
-The test is so you can show us what clean code looks like. Clean it up as best you can!
+- **Models** represent students, courses, requirements, diplomas, and academic standing.
+- **Repository** provides sample data and methods to retrieve students, diplomas, and requirements.
+- **Service** encapsulates business logic for evaluating graduation criteria and academic standing.
+- **GraduationTracker** service implements graduation logic by checking if a student meets diploma requirements and calculates their academic standing.
+- **Unit tests** verify graduation status and standing for various student scenarios.
 
-You will be joining a team that believes in SOLID design principles. We also favour declarative over imperative programming. And we generally use rich service models, with thin domain models, which looks very much like SOA over REST.
+## Build Instructions
 
-Submissions that follow these principles will be favoured since you will fit right in with the current team. If there is a part of the test that blocks you from completing it, then put some comments explaining why it was blocking, and what you would have done if the obstacle was removed.
+1. **Restore dependencies**  
+   Open a terminal in the solution root and run:
+   ```sh
+   dotnet restore
+   ```
 
-Good Luck!
+2. **Build the solution**  
+   ```sh
+   dotnet build
+   ```
+
+## Run Instructions
+
+### Running Unit Tests
+
+To execute all unit tests:
+```sh
+dotnet test
+```
+
+This will build the solution and run tests in the `GraduationTracker.Tests.Unit` project.
+
+## Requirements
+
+- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
